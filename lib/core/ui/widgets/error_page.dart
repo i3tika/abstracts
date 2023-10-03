@@ -11,7 +11,7 @@ class ErrorPage extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              S.of(context).text_error_connect,
+              S.of(context).text_bad_connect,
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 100,

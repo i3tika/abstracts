@@ -5,3 +5,5 @@ export 'fiel_pdf/_fiel_pdf.dart';
 export 'dio_settings/_dio_settings.dart';
 export 'testings_api/_testings_api.dart';
 export 'secure_storage/shared_preferences_example.dart';
+export 'example/_example.dart';
+export 'auth_subabase/_auth_subabase.dart';

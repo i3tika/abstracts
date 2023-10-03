@@ -81,10 +81,10 @@ class S {
   }
 
   /// `Плохое соеденинение`
-  String get text_error_connect {
+  String get text_bad_connect {
     return Intl.message(
       'Плохое соеденинение',
-      name: 'text_error_connect',
+      name: 'text_bad_connect',
       desc: '',
       args: [],
     );

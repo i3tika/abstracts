@@ -23,10 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "subtitle_hivetest": MessageLookupByLibrary.simpleMessage("HiveTest"),
+        "text_bad_connect":
+            MessageLookupByLibrary.simpleMessage("Плохое соеденинение"),
         "text_delete":
             MessageLookupByLibrary.simpleMessage("Заметка была удалена"),
-        "text_error_connect":
-            MessageLookupByLibrary.simpleMessage("Плохое соеденинение"),
         "title_hiveTest": MessageLookupByLibrary.simpleMessage("Hello HiveTest")
       };
 }
