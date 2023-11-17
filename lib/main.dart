@@ -1,5 +1,11 @@
 //* package
+import 'package:abstracts/core/route/auto_route.dart';
+import 'package:abstracts/feature/form_key/form_key.dart';
+import 'package:abstracts/feature/qr_code_scaner/pages/qr_scanlit.dart';
+import 'package:abstracts/feature/sliver/sliver_widget.dart';
+import 'package:abstracts/feature/testings_api/pages/json_phd.dart';
 import 'package:abstracts/firebase_options.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 // import 'package:supabase_flutter/supabase_flutter.dart';
@@ -9,6 +15,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:abstracts/feature/_feature.dart';
 import 'package:abstracts/core/ui/_ui.dart';
 import 'package:abstracts/core/network/_network.dart';
+// import 'feature/form_key/form_key.dart';
 import 'feature/go_router/widgets/navigatorKey.dart';
 
 //*

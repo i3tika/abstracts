@@ -89,6 +89,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Рандом`
+  String get title_random {
+    return Intl.message(
+      'Рандом',
+      name: 'title_random',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
