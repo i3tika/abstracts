@@ -5,9 +5,10 @@ class JsonPHDPage extends StatelessWidget {
   const JsonPHDPage({super.key});
 
   @override
+  @Deprecated('')
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('API')),
+      appBar: AppBar(title: Text('API')),      
       body: SafeArea(
         child: JsonWidgets(),
       ),

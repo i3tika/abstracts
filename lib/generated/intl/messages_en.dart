@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Плохое соеденинение"),
         "text_delete":
             MessageLookupByLibrary.simpleMessage("Заметка была удалена"),
-        "title_hiveTest": MessageLookupByLibrary.simpleMessage("Hello HiveTest")
+        "title_hiveTest":
+            MessageLookupByLibrary.simpleMessage("Hello HiveTest"),
+        "title_random": MessageLookupByLibrary.simpleMessage("Рандом")
       };
 }
