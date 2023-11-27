@@ -1,3 +1,4 @@
 {
-    "text_delete":"Заметка жок"
+    "text_delete":"Заметка жок",
+  "input_email": "Ведите правильный Email"
 }
