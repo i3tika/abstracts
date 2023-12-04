@@ -1,5 +1,4 @@
 import 'package:abstracts/core/route/auto_route.gr.dart';
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 

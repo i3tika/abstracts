@@ -1,27 +1,43 @@
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 
 class MySliver extends StatelessWidget {
   MySliver({super.key});
   @override
-  Widget build(BuildContext context) => MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Scaffold(
-        body: SafeArea(
-          child: CustomScrollView(slivers: [
-            SliverAppBar(
-                pinned: true,
-                expandedHeight: 150.0,
-                flexibleSpace: FlexibleSpaceBar(
-                  title: Text('Available seats'),
-                  background: Image.network(
-                    'https://r-cf.bstatic.com/images/hotel/max1024x768/116/116281457.jpg',
-                    fit: BoxFit.fitWidth,
-                  ),
-                )),
-          ]),
-        ),
-      ));
+  Widget build(BuildContext context) {
+    ExpandableController emissionController = ExpandableController(
+      initialExpanded: true,
+    );
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+              color: Colors.amber,
+              child: GestureDetector(
+                onTap: () => emissionController.expanded = false,
+                child: ExpandablePanel(
+                    controller: emissionController,
+                    collapsed: const SizedBox.shrink(),
+                    expanded: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SliverList(
+                            delegate: SliverChildBuilderDelegate(childCount: 5,
+                                (context, index) {
+                          return Text('data');
+                        }))
+                      ],
+                    )),
+              ),
+            ),
+          ),
+        ],
+      )),
+    );
+  }
 }
 
 class MyAppSliver extends StatelessWidget {
@@ -51,6 +67,14 @@ class MyAppSliver extends StatelessWidget {
                 ).toList(),
               ),
             ),
+                 ListView.builder(
+            
+            itemCount: 5,
+            shrinkWrap: true,
+            itemBuilder: (BuildContext context, int index) {
+              return const Text('List One');
+            },
+          ),
           ],
         ),
       ),

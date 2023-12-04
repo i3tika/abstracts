@@ -12,35 +12,42 @@ import 'package:abstracts/feature/task/pages/a_pag_three.dart' as _i2;
 import 'package:abstracts/feature/task/pages/a_page_four.dart' as _i1;
 import 'package:abstracts/feature/task/pages/a_page_two.dart' as _i3;
 import 'package:abstracts/feature/task/pages/auto_route_page.dart' as _i4;
-import 'package:auto_route/auto_route.dart' as _i5;
+import 'package:abstracts/feature/task/pages/format_page.dart' as _i5;
+import 'package:auto_route/auto_route.dart' as _i6;
 
-abstract class $AppRouter extends _i5.RootStackRouter {
+abstract class $AppRouter extends _i6.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i5.PageFactory> pagesMap = {
+  final Map<String, _i6.PageFactory> pagesMap = {
     AFourRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.AFourPage(),
       );
     },
     AThreeRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i2.AThreePage(),
       );
     },
     ATwoRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i3.ATwoPage(),
       );
     },
     AutoOneRoute.name: (routeData) {
-      return _i5.AutoRoutePage<dynamic>(
+      return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i4.AutoOnePage(),
+      );
+    },
+    FormatRoute.name: (routeData) {
+      return _i6.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i5.FormatPage(),
       );
     },
   };
@@ -48,8 +55,8 @@ abstract class $AppRouter extends _i5.RootStackRouter {
 
 /// generated route for
 /// [_i1.AFourPage]
-class AFourRoute extends _i5.PageRouteInfo<void> {
-  const AFourRoute({List<_i5.PageRouteInfo>? children})
+class AFourRoute extends _i6.PageRouteInfo<void> {
+  const AFourRoute({List<_i6.PageRouteInfo>? children})
       : super(
           AFourRoute.name,
           initialChildren: children,
@@ -57,13 +64,13 @@ class AFourRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'AFourRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.AThreePage]
-class AThreeRoute extends _i5.PageRouteInfo<void> {
-  const AThreeRoute({List<_i5.PageRouteInfo>? children})
+class AThreeRoute extends _i6.PageRouteInfo<void> {
+  const AThreeRoute({List<_i6.PageRouteInfo>? children})
       : super(
           AThreeRoute.name,
           initialChildren: children,
@@ -71,13 +78,13 @@ class AThreeRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'AThreeRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.ATwoPage]
-class ATwoRoute extends _i5.PageRouteInfo<void> {
-  const ATwoRoute({List<_i5.PageRouteInfo>? children})
+class ATwoRoute extends _i6.PageRouteInfo<void> {
+  const ATwoRoute({List<_i6.PageRouteInfo>? children})
       : super(
           ATwoRoute.name,
           initialChildren: children,
@@ -85,13 +92,13 @@ class ATwoRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'ATwoRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i4.AutoOnePage]
-class AutoOneRoute extends _i5.PageRouteInfo<void> {
-  const AutoOneRoute({List<_i5.PageRouteInfo>? children})
+class AutoOneRoute extends _i6.PageRouteInfo<void> {
+  const AutoOneRoute({List<_i6.PageRouteInfo>? children})
       : super(
           AutoOneRoute.name,
           initialChildren: children,
@@ -99,5 +106,19 @@ class AutoOneRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'AutoOneRoute';
 
-  static const _i5.PageInfo<void> page = _i5.PageInfo<void>(name);
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i5.FormatPage]
+class FormatRoute extends _i6.PageRouteInfo<void> {
+  const FormatRoute({List<_i6.PageRouteInfo>? children})
+      : super(
+          FormatRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FormatRoute';
+
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }

@@ -4,9 +4,9 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    AppRouter appRouter = AppRouter();
-    return MaterialApp.router(
-      routerConfig: appRouter.config(),
+    // AppRouter appRouter = AppRouter();
+    return MaterialApp(
+      // routerConfig: appRouter.config(),
       // navigatorKey: navigatorKey,
       localizationsDelegates: const [
         S.delegate,
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       // supportedLocales: [Locale('ru'), Locale('kg')],
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(useMaterial3: true),
-      // home: PageScaffold(),
-      // home: PageScaffold(),
+      home: PageScaffold(),
+      // home: MySliver(),
     );
   }
 }

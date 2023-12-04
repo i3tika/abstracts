@@ -52,6 +52,7 @@ dependencies:
   qr_code_scanner: ^1.0.1
   date_time: ^0.10.0
   dartdoc: ^6.3.0
+  expandable: ^5.0.1
 
   auto_route_generator: ^7.3.2
   auto_route: ^7.8.4
