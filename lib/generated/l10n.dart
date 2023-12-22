@@ -99,6 +99,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Ведите правильный Email`
+  String get input_email {
+    return Intl.message(
+      'Ведите правильный Email',
+      name: 'input_email',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

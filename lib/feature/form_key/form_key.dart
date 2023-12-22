@@ -53,11 +53,11 @@ class _FormWidgetKeyState extends State<FormWidgetKey> {
                 setState(() {});
               } else {
                 setState(() {});
-                return 'Ведите правильный Email';
+                return S.of(context).input_email;
               }
               return null;
             },
-            inputFormatters: [],
+            // inputFormatters: [],
           ),
           const SizedBox(height: 15),
           ATextField(
@@ -76,14 +76,6 @@ class _FormWidgetKeyState extends State<FormWidgetKey> {
           ),
           const SizedBox(height: 15),
           success ? const SizedBox.shrink() : Icon(Icons.golf_course, size: 55),
-          // ATextField(
-          //     hintText: 'ssss',
-          //     autofocus: true,
-          //     controller: passwordController,
-          //     validatorFunc: (valueKey) {
-          //       return null;
-          //     },
-          //   ),
           FilledButton(
             onPressed: () {
               setState(
@@ -97,7 +89,7 @@ class _FormWidgetKeyState extends State<FormWidgetKey> {
                 },
               );
             },
-            child: Text('Simbit'),
+            child: Text('Sim bit'),
           ),
         ],
       ),
