@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "input_email":
+            MessageLookupByLibrary.simpleMessage("Ведите правильный Email"),
         "subtitle_hivetest": MessageLookupByLibrary.simpleMessage("HiveTest"),
         "text_bad_connect":
             MessageLookupByLibrary.simpleMessage("Плохое соеденинение"),

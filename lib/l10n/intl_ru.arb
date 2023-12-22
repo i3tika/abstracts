@@ -1,5 +1,6 @@
 {
     "title_hiveTest": "Привет HiveTest",
     "subtitle_hivetest": "HiveTest",
-    "text_delete":"Note has been deleted"
-  }
+    "text_delete":"Note has been deleted",
+  "input_email": "Ведите правильный Email"
+}
