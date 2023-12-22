@@ -109,6 +109,16 @@ class S {
       args: [],
     );
   }
+
+  /// `School`
+  String get title_school {
+    return Intl.message(
+      'School',
+      name: 'title_school',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

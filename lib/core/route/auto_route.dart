@@ -11,14 +11,23 @@ class AppRouter extends $AppRouter {
         AutoRoute(
           page: AutoOneRoute.page,
           path: '/homePage',
-          // initial: true,
+          initial: true,
         ),
         AutoRoute(page: ATwoRoute.page, path: '/twoPage'),
         AutoRoute(page: AThreeRoute.page, path: '/threePage'),
         AutoRoute(
           page: FormatRoute.page,
           path: '/formatRoute',
-          initial: true,
+          // initial: true,
         ),
+        AutoRoute(
+          page: JsonPHDRoute.page,
+          path: '/jsonPHDRoute',
+        )
+        //   AutoRoute(
+        //   page: JsonPHDRoute.page,
+        //   path: '/jsonPHDPage',
+        //   // initial: true,
+        // ),
       ];
 }

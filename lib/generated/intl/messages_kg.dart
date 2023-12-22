@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "input_email":
             MessageLookupByLibrary.simpleMessage("Ведите правильный Email"),
-        "text_delete": MessageLookupByLibrary.simpleMessage("Заметка жок")
+        "text_delete": MessageLookupByLibrary.simpleMessage("Заметка жок"),
+        "title_school": MessageLookupByLibrary.simpleMessage("Мектеп")
       };
 }

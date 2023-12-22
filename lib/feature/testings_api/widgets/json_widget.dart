@@ -26,15 +26,23 @@ class JsonWidgets extends StatelessWidget {
                     state.moldeList[index].title ?? '404',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.purple,
+                      color: Colors.deepPurpleAccent,
                     ),
                   ),
                   subtitle: Text(state.moldeList[index].body ?? '404'),
-                  // trailing: Text(state.moldeList.userId!.userId.toString()),
+                  trailing: Text(
+                    state.moldeList[index].userId!.toString(),
+                    style: TextStyle(
+                      color: Colors.amber,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 );
               });
         }
-        return Center(child: Text('sss'));
+        return Center(
+          child: Text('error'),
+        );
       },
     );
   }

@@ -1,4 +1,6 @@
+import 'package:abstracts/core/network/Interceptors/firebase_perfomance_interceptor.dart';
 import 'package:abstracts/core/network/_network.dart';
+import 'package:flutter/foundation.dart';
 
 class DioSettings {
   DioSettings() {
@@ -21,8 +23,10 @@ class DioSettings {
 
     interceptors.addAll([
       ConnectionInterceptor(),
+      if(kReleaseMode) DioFirebasePerformanceInterceptor(),
       // ALogInterceptor(),
       LoggerInterceptor(),
     ]);
   }
 }
+

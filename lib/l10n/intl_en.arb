@@ -4,5 +4,6 @@
   "text_delete": "Заметка была удалена",
   "text_bad_connect": "Плохое соеденинение",
   "title_random": "Рандом",
-  "input_email": "Ведите правильный Email"
+  "input_email": "Ведите правильный Email",
+  "title_school": "School"
 }

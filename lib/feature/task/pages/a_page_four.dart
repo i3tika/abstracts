@@ -19,7 +19,7 @@ class AFourPage extends StatelessWidget {
                 Text('4page'),
                 FilledButton(
                     onPressed: () {
-                      // context.router.push(AutoOneRoute());
+                      // context.router.push(JsonPHDRoute());
                     },
                     child: Text('-> 1'))
               ],

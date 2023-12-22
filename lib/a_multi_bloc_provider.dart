@@ -25,4 +25,3 @@ class AMultiBlocProvider extends StatelessWidget {
     );
   }
 }
-

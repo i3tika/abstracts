@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Заметка была удалена"),
         "title_hiveTest":
             MessageLookupByLibrary.simpleMessage("Hello HiveTest"),
-        "title_random": MessageLookupByLibrary.simpleMessage("Рандом")
+        "title_random": MessageLookupByLibrary.simpleMessage("Рандом"),
+        "title_school": MessageLookupByLibrary.simpleMessage("School")
       };
 }
