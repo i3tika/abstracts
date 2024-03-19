@@ -20,9 +20,11 @@ class AMultiBlocProvider extends StatelessWidget {
           create: (context) =>
               JsonPhdBBloc(repo: RepositoryProvider.of<JsonPHDRepo>(context)),
         ),
+        BlocProvider(
+          create: (context) => TelegramBloc(),
+        ),
       ],
       child: app,
     );
   }
 }
-

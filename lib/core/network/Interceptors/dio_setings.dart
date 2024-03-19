@@ -1,5 +1,5 @@
 import 'package:abstracts/core/network/_network.dart';
-
+bool isLk = false;
 class DioSettings {
   DioSettings() {
     setup();

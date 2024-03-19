@@ -1,6 +1,6 @@
 name: abstracts
 description: A new Flutter project.
-version: 1.0.1
+version: 1.0.2
 # homepage: https://dcm.dev/
 repository: https://github.com/i3tika/abstracts
 issue_tracker: https://github.com/i3tika/abstracts/issues
@@ -43,7 +43,7 @@ dependencies:
   file_picker: ^5.5.0
   logger: ^2.0.2
   json_annotation: ^4.8.1
-  shared_preferences: ^2.2.1
+  shared_preferences: ^2.2.2
   talker_dio_logger: ^2.3.0
   supabase_flutter: ^1.10.19
   mask_text_input_formatter: ^2.5.0
@@ -56,6 +56,11 @@ dependencies:
   auto_route_generator: ^7.3.2
   auto_route: ^7.8.4
   equatable: ^2.0.5
+  neopop: ^1.0.2
+  firebase_remote_config: ^4.3.13
+  bulleted_list: ^0.0.1+0.1a
+  carousel_slider: ^4.2.1
+  provider: ^6.1.2
 
 
 dev_dependencies:
