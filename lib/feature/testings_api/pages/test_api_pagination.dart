@@ -1,91 +1,105 @@
-import 'package:abstracts/core/network/_network.dart';
-import 'package:abstracts/core/ui/_ui.dart';
+import 'package:abstracts/feature/testings_api/data/models/products.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:intl/intl.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-class ItemsList extends StatefulWidget {
+import '../../../core/network/_network.dart';
+
+@RoutePage()
+class PaginationPage extends StatefulWidget {
+  const PaginationPage({super.key});
+
   @override
-  _ItemsListState createState() => _ItemsListState();
+  State<PaginationPage> createState() => _PaginationPageState();
 }
 
-class _ItemsListState extends State<ItemsList> {
-  ScrollController _scrollController = ScrollController();
-  List<String> _data = [];
-  bool _isLoading = false;
-  int _currentPage = 1;
-  int _totalPages = 10;
-  Dio _dio = Dio();
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
-
-  void _scrollListener() {
-    if (_scrollController.offset >=
-        _scrollController.position.maxScrollExtent &&
-        !_scrollController.position.outOfRange) {
-      if (!_isLoading && _currentPage < _totalPages) {
-        setState(() {
-          _isLoading = true;
-          _currentPage++;
-        });
-        _fetchData();
-      }
-    }
-  }
-
-  Future<void> _fetchData() async {
-    // Simulate API call delay
-    await Future.delayed(Duration(seconds: 2));
-
-    // Fetch data for the current page from your data source
-    List<String> newData = await _getPaginatedData(_currentPage);
-
-    setState(() {
-      _data.addAll(newData); 
-    });
-  }
-
-  Future<List<String>> _getPaginatedData(int page) async {
-    // Fetch data for the given page from your data source
-    // Example API call:
-    final response = await _dio.get('http://localhost:8080/confluence/rest/api/space/ds/content/$page?limit=5');
-    // Parse the response and return the data as a list
-    // return List<String>.from(json.decode(response.data));
-
-    // Simulate fetching data
-    return List<String>.generate(20, (index) => 'Item ${(page - 1) * 20 + index + 1}');
-  }
-
+class _PaginationPageState extends State<PaginationPage> {
+  // final ScrollController scrollController = ScrollController();
+  // List<Products> products = [];
+  // int totalProduct = 1000;
+  // bool isLoading = false;
+  // final Dio dio = Dio();
+  // @override
+  // void initState() {
+  //   scrollController.addListener(loanMoreData);
+  //   getProduct();
+  //   super.initState();
+  // }
+  CalendarFormat _calendarFormat = CalendarFormat.month;
+  DateTime _selectedDay = DateTime.now();
+  DateTime _focusedDay = DateTime.utc(2010, 10, 16).toLocal();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pagination Example'),
+        title: Text('TableCalendar Example'),
       ),
-      body: ListView.builder(
-        controller: _scrollController,
-        itemCount: _data.length + 1,
-        itemBuilder: (context, index) {
-          if (index < _data.length) {
-            return ListTile(
-              title: Text(_data[index]),
-            );
-          } else if (_isLoading) {
-            return Center(child: CircularProgressIndicator());
-          } else {
-            return Container();
-          }
-        },
+      body: Column(
+        children: [
+          TableCalendar(
+            firstDay: DateTime.utc(2000, 10, 16),
+            lastDay: DateTime.utc(2030, 3, 14),
+            focusedDay: _focusedDay,
+            calendarFormat: _calendarFormat,
+            onPageChanged: (focusedDay) {
+              setState(() {
+                _focusedDay = focusedDay;
+              });
+            },
+            selectedDayPredicate: (day) {
+              return isSameDay(_selectedDay, day);
+            },
+            onDaySelected: (selectedDay, focusedDay) {
+              setState(() {
+                _selectedDay = selectedDay;
+                _focusedDay = focusedDay;
+              });
+            },
+          ),
+          // Your custom Text widget that displays the current month
+          Text(
+            DateFormat.MMMM('en').format(_focusedDay),
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
       ),
     );
   }
-
-  @override
-  void initState() {
-    super.initState();
-    _fetchData();
-    _scrollController.addListener(_scrollListener);
-  }
-
 }
+
+//   void loanMoreData() {
+//     if (scrollController.position.pixels ==
+//             scrollController.position.maxScrollExtent &&
+//         products.length < totalProduct) {
+//       getProduct();
+//     }
+//   }
+
+//   Future<void> getProduct() async {
+//     try {
+//       setState(() {
+//         isLoading = true;
+//       });
+//       final response = await dio.get(
+//         'https://dummyjson.com/products?limit=15&skip=${products.length}&select=title,price,thumbnail',
+//       );
+//       final List data = response.data['products'];
+//       final List<Products> newProduct =
+//           data.map((p) => Products.fromJson(p)).toList();
+//       setState(() {
+//         isLoading = false;
+//         totalProduct = response.data['total'];
+//         products.addAll(newProduct);
+//       });
+//       print(newProduct);
+//     } catch (e) {
+//       print(e);
+//     }
+//   }
+// }

@@ -12,21 +12,16 @@ class ATwoPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Column(
-              children: [
-                Text('2page'),
-                FilledButton(
-                    onPressed: () {
-                      context.router.push(AThreeRoute());
-                    },
-                    child: Text('-> 3'))
-              ],
-            ),
-          )
-        ],
+        children: [Center(child: preview())],
       ),
+    );
+  }
+
+  Widget preview() {
+    return const Column(
+      children: [
+        Text('TESTAPGE TWO'),
+      ],
     );
   }
 }

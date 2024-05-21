@@ -1,7 +1,10 @@
 //* package
+import 'package:abstracts/core/di/di.dart';
 import 'package:abstracts/core/route/auto_route.dart';
 import 'package:abstracts/feature/test_shared_prefs/pages/sscroll.dart';
 import 'package:abstracts/feature/test_shared_prefs/state/save_bool/save_bool_bloc.dart';
+import 'package:abstracts/feature/testings_api/pages/mounted_page.dart';
+import 'package:abstracts/feature/testings_api/pages/test_api_pagination.dart';
 import 'package:abstracts/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -26,7 +29,7 @@ Future<void> main() async {
   //   url: Endpoints.projectURL,
   //   anonKey: Endpoints.apiKey,
   // );
-
+  getIt.registerSingleton<AppRouter>(AppRouter());
   // PostRepo postRepo = PostRepo();
   // List<PostModel> postModels = await postRepo.fetchPost();
   // log(postModels.toString());

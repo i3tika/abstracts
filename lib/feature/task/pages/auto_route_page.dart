@@ -1,3 +1,5 @@
+import 'package:abstracts/core/di/di.dart';
+import 'package:abstracts/core/route/auto_route.dart';
 import 'package:abstracts/core/route/auto_route.gr.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
@@ -16,10 +18,10 @@ class AutoOnePage extends StatelessWidget {
           Center(
             child: Column(
               children: [
-                Text('1page'),
+                Text('1pagыыe'),
                 FilledButton(
                     onPressed: () {
-                      context.router.push(ATwoRoute());
+                      getIt<AppRouter>().push(const ATwoRoute());
                     },
                     child: Text('-> 2'))
               ],
